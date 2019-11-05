@@ -1,0 +1,32 @@
+server:
+  port: 19997
+
+spring:
+  application:
+    name: flakesoup-config
+  profiles:
+    active: ${env}
+  # 配置中心
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+
+# 注册中心配置
+eureka:
+  auth:
+    user: flakesoup
+    password: flakesoup
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${eureka.auth.user}:${eureka.auth.password}@eureka-server:18761/eureka/
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

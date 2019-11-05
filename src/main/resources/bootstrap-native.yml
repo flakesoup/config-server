@@ -1,0 +1,12 @@
+env: native
+
+## 注册中心配置
+#eureka:
+#  auth:
+#    user: flakesoup
+#    password: flakesoup
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://${eureka.auth.user}:${eureka.auth.password}@eureka-server:18761/eureka/
