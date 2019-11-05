@@ -1,1 +1,13 @@
 env: dev
+
+spring:
+  application:
+    name: flakesoup-config
+  profiles:
+    active: ${env}
+  # 配置中心
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/flakesoup/config-center-repo
