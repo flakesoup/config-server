@@ -1,17 +1,17 @@
 # 加解密根密码
 jasypt:
   encryptor:
-    password: flakesoup #根密码
+    password: pig #根密码
 
 # Spring 相关
 spring:
-#  redis:
-#    password:
-#    host: pig-redis
+  redis:
+    password:
+    host: pig-redis
   # zipkin
   zipkin:
     enabled: true
-    base-url: http://flakesoup-zipkin
+    base-url: http://pig-zipkin
   sleuth:
     web:
       client:
@@ -77,8 +77,8 @@ mybatis-plus:
     map-underscore-to-camel-case: true
 
 # spring security 配置
-#security:
-#  oauth2:
-#    resource:
-#      loadBalanced: true
-#      token-info-uri: http://pig-auth/oauth/check_token
+security:
+  oauth2:
+    resource:
+      loadBalanced: true
+      token-info-uri: http://pig-auth/oauth/check_token
