@@ -1,0 +1,10 @@
+spring:
+  # 安全配置
+  security:
+    user:
+      name: flakesoupmonitor
+      password: flakesoupmonitor
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
